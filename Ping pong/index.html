@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pong Mitico</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="tema-madera">
+
+<canvas id="cancha"></canvas>
+
+<div id="hud" class="oculto">
+    <div class="marcador-item">Tu: <span id="puntajeJugador">0</span></div>
+    <div class="nivel-actual" id="nivelActual">Nivel: Normal</div>
+    <div class="marcador-item">Maquina: <span id="puntajeMaquina">0</span></div>
+    <div id="powerupIndicador" class="powerup-indicador"></div>
+</div>
+
+<div id="menu-inicio" class="menu">
+    <h1>PONG</h1>
+    <p class="subtitulo">El juego mitico, a tu manera</p>
+    <button class="boton" id="btnIniciar">Iniciar Partida</button>
+    <button class="boton" id="btnNiveles">Niveles</button>
+
+    <div class="selector-tema">
+        <p>Elige un tema</p>
+        <div class="opciones-tema">
+            <button class="btn-tema activo" data-tema="madera">Madera</button>
+            <button class="btn-tema" data-tema="acuatico">Acuatico</button>
+        </div>
+    </div>
+</div>
+
+<div id="menu-niveles" class="menu oculto">
+    <h2>Selecciona tu nivel</h2>
+    <button class="boton btn-nivel" data-nivel="1">Nivel 1 — Normal</button>
+    <button class="boton btn-nivel" data-nivel="2">Nivel 2 — Dificil</button>
+    <button class="boton btn-nivel" data-nivel="3">Nivel 3 — Hardcore</button>
+    <button class="boton boton-secundario" id="btnVolver">Volver</button>
+</div>
+
+<div id="pantalla-final" class="menu oculto">
+    <h2 id="mensajeFinal">GAME OVER</h2>
+    <button class="boton" id="btnReintentar">Volver al menu</button>
+</div>
+
+<script src="js/juego.js"></script>
+</body>
+</html>
